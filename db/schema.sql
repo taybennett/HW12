@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS dogs_db;
+CREATE DATABASE dogs_db;
+USE dogs_db;
+
+CREATE TABLE dogs (
+  id INTEGER AUTOINCREMENT NOT NULL,
+  dog_type VARCHAR(255),
+  dog_color VARCHAR (255),
+  PRIMARY KEY (id)
+);

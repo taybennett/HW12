@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <h3>dogs ready to buy</h3>
+      <ul>
+        {{#each dogs}}
+          {{#unless this.bought}}
+            <li class="dog-list">{{this.dog_name}}
+              <button type="button" class="btn btn-primary bought-btn" data-id="{{id}}">Buy it!</button>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-5 offset-md-1">
+      <h3>dogs that have been bought</h3>
+      <ul>
+        {{#each dogs}}
+          {{#if this.bought}}
+            <li class="dog-list-bought">{{this.dog_name}}
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6 offset-md-3 text-center">
+      <form>
+        <div class="form-group">
+          <label id="input-label" for="add-dog-box">Order a Dog</label>
+          <input type="text" class="form-control" id="add-dog-box" placeholder="Enter a dog type">
+        </div>
+        <button type="submit" id="submit-dog" class="btn btn-primary">Order</button>
+      </form>
+    </div>
+  </div>
+</div>
