@@ -4,8 +4,8 @@ $(function() {
   $(".bought-btn").on("click", function(event) {
     var id = $(this).data("id");
     
-    var newboughtedState = {
-      boughted: true
+    var newBoughtState = {
+      newBoughtState: true
     };
     
     $.ajax("/api/dogs/" + id, {
